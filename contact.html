@@ -19,40 +19,42 @@
     <main>
         <article>
             <section>
-            <p><em>Guldbergsgade 29N 2200 Copenhagen</em></p>
-                <p><em>Phone no.:<a href="tel:+45"> 20 82 53 70</a></em></p>
-                <p><em>E-mail: <a href="mailto:">info@restaurantkea.dk</a></em></p>
+                <address>
+                    <p>Guldbergsgade 29N 2200 Copenhagen</p>
+                    <p>Phone no.:<a href="tel:+4520825370" title="Phone restaurant KEA"> 20 82 53 70</a></p>
+                    <p>E-mail: <a href="mailto:info@restaurantkea.dk" title="Email Restaurant KEA">info@restaurantkea.dk</a></p>
+                </address>    
+                <img src="restaurant_assets/img/map.jpg" alt="map" width="100%" height="100%">
             </section>
-            <img src="restaurant_assets/img/map.jpg" alt="map" width="100%" height="100%">
             <section>
                 <form>
                     <fieldset>
                         <legend>Contact form</legend>
                         <div>
                             <label for="fname">Full name</label>
-                            <input id="fname" type="text" name="fname">
-                         </div>
-                         <div>
+                            <input id="fname" type="text" name="fname" required pattern="([A-Aa-z-])+[A-Za-z-]+">
+                        </div>
+                        <div>
                             <label for="phone">Phone no.</label>
-                            <input id="phone" type="text" name="phone">
+                            <input id="phone" type="tel" name="phone" required>
                         </div>
                         <div>
                             <label for="email">Email</label>
-                            <input id="email" type="text" name="email">
+                            <input id="email" type="email" name="email" required>
                         </div>
                         <div>
                             <label for="persons">Persons</label>
-                            <input id="persons" type="number" name="persons" value="2" min="1">
+                            <input id="persons" type="number" name="persons" value="2" min="1" max="20" required>
                         </div>
                         <div>
                             <label for="date-time">Date and time</label>
-                            <input id="date-time" type="datetime-local" name="date-time">
+                            <input id="date-time" type="datetime-local" name="date-time" required>
                         </div>
                         <div>
                             <label for="info">Further information</label>
                             <textarea name="info" id="info"></textarea>
                         </div>
-                        <button>Send</button>
+                        <button type="submit">Send</button>
                     </fieldset>
                 </form>
             </section>
